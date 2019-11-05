@@ -8,7 +8,7 @@
   	<!-- Jumbotron -->
 
 	<div class="jumbotron">
-	  <div class="container text-center text-white">
+	  <div class="container text-center text-white lead_title">
 	    <h1 class="display-3">Bienvenue sur notre site EventBrideLike !</h1>
 	  	<p class="lead">Ici c'est notre super site événementiel, il est chouette, non ?</p>
       </div>
@@ -21,7 +21,7 @@
         <%= flash[:danger] %>
       </div>
     <% end %>
-    
+
 	<!-- Page d'accueil -->
 
     <% if Event.all.empty? %>
@@ -43,7 +43,7 @@
 	          <p class="card-text"><%= event.description %></p>
 	          <%= link_to "Consulter", event_path(event.id), class: "btn btn-primary"%>
 	          <% if current_user && event.admin == current_user %>
-	          <%= link_to "Modifier le gossip", edit_event_path(event.id), class: "btn btn-success" %>
+	          <%= link_to "Modifier l'événement", edit_event_path(event.id), class: "btn btn-success" %>
 	          <%= link_to "Supprimer", event_path(event.id), method: "delete", :data => {:confirm => 'Êtes-vous sûr ?'}, class: "btn btn-danger" %> 
 	          <% end %>
 	        </div>

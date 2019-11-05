@@ -13,3 +13,26 @@
  *= require_tree .
  *= require_self
  */
+
+body {
+
+	margin: 20px;
+}
+
+.jumbotron {
+	height: 500px;
+	background-image: url(party.jpg);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.lead_title {
+
+  margin-top: 180px;
+}
+
+.row {
+	border: solid 1px;
+	margin: 10px;
+}
