@@ -33,4 +33,7 @@ class Event < ApplicationRecord
   	end
   end
 
+  def find_end_date
+    end_date = self.start_date + self.duration
+  end
 end
