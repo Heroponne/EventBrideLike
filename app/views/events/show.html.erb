@@ -51,5 +51,8 @@
         <div class="col-lg-4"><%= @event.admin.email %></div>
       </div>
     </div>
+    <% if current_user != @event.admin && current_user.events.exclude?(@event) %>
+      <%= link_to "Rejoindre l'événement", new_event_attendance_path(params[:id]), class: "btn btn-primary col-lg-4"%>
+    <% end %>
   </body>
 </html>
